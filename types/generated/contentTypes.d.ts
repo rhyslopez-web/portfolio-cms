@@ -368,13 +368,17 @@ export interface ApiProjectProject extends Schema.CollectionType {
     singularName: 'project';
     pluralName: 'projects';
     displayName: 'Projects';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    ProjectTitle: Attribute.String;
-    ProjectThumbnail: Attribute.Media<'images'> & Attribute.Required;
+    Title: Attribute.String;
+    Description: Attribute.Text;
+    Thumbnail: Attribute.Media<'images'> & Attribute.Required;
+    Thumbnail2: Attribute.Media<'images'>;
+    Thumbnail3: Attribute.Media<'images'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
