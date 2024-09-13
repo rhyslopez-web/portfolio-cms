@@ -48,8 +48,14 @@
       "target": "api::skill.skill",
       "inversedBy": "projects"
     },
-    "ProjectPageDescription": {
-      "type": "blocks"
+    "AboutProject": {
+      "type": "text"
+    },
+    "ProjectGoals": {
+      "type": "text"
+    },
+    "FutureImprovements": {
+      "type": "text"
     }
   }
 }
