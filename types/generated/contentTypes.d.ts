@@ -384,6 +384,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
       'manyToMany',
       'api::skill.skill'
     >;
+    ProjectPageDescription: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
