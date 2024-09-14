@@ -65,6 +65,9 @@
     },
     "UpcomingImprovements": {
       "type": "text"
+    },
+    "ProjectId": {
+      "type": "integer"
     }
   }
 }

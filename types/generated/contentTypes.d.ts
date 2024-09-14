@@ -390,6 +390,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
     WebsiteLink: Attribute.String;
     GithubLink: Attribute.String;
     UpcomingImprovements: Attribute.Text;
+    ProjectId: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
