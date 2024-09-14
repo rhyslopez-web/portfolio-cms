@@ -387,6 +387,9 @@ export interface ApiProjectProject extends Schema.CollectionType {
     AboutProject: Attribute.Text;
     ProjectGoals: Attribute.Text;
     FutureImprovements: Attribute.Text;
+    WebsiteLink: Attribute.String;
+    GithubLink: Attribute.String;
+    UpcomingImprovements: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

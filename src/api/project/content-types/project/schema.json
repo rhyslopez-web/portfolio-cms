@@ -56,6 +56,15 @@
     },
     "FutureImprovements": {
       "type": "text"
+    },
+    "WebsiteLink": {
+      "type": "string"
+    },
+    "GithubLink": {
+      "type": "string"
+    },
+    "UpcomingImprovements": {
+      "type": "text"
     }
   }
 }
