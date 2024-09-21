@@ -817,7 +817,6 @@ export interface ApiProjectProject extends Schema.CollectionType {
     GithubLink: Attribute.String;
     UpcomingImprovements: Attribute.Text;
     ProjectId: Attribute.Integer;
-    CoverImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -878,6 +877,7 @@ export interface ApiWorkExperienceWorkExperience extends Schema.CollectionType {
     singularName: 'work-experience';
     pluralName: 'work-experiences';
     displayName: 'WorkExperience';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -887,6 +887,7 @@ export interface ApiWorkExperienceWorkExperience extends Schema.CollectionType {
     Description: Attribute.Text;
     StartingDate: Attribute.String;
     EndDate: Attribute.String;
+    Company: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
