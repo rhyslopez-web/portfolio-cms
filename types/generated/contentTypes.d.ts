@@ -817,6 +817,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
     GithubLink: Attribute.String;
     UpcomingImprovements: Attribute.Text;
     ProjectId: Attribute.Integer;
+    CoverImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
