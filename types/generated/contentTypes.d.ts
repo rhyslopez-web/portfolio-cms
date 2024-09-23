@@ -788,6 +788,37 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiAboutAbout extends Schema.SingleType {
+  collectionName: 'abouts';
+  info: {
+    singularName: 'about';
+    pluralName: 'abouts';
+    displayName: 'About';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    WorkEducation: Attribute.Text;
+    Interests: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::about.about',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::about.about',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiProjectProject extends Schema.CollectionType {
   collectionName: 'projects';
   info: {
@@ -872,6 +903,37 @@ export interface ApiSkillSkill extends Schema.CollectionType {
   };
 }
 
+export interface ApiStackStack extends Schema.CollectionType {
+  collectionName: 'stacks';
+  info: {
+    singularName: 'stack';
+    pluralName: 'stacks';
+    displayName: 'Stack';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::stack.stack',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::stack.stack',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiWorkExperienceWorkExperience extends Schema.CollectionType {
   collectionName: 'work_experiences';
   info: {
@@ -925,8 +987,10 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::about.about': ApiAboutAbout;
       'api::project.project': ApiProjectProject;
       'api::skill.skill': ApiSkillSkill;
+      'api::stack.stack': ApiStackStack;
       'api::work-experience.work-experience': ApiWorkExperienceWorkExperience;
     }
   }
